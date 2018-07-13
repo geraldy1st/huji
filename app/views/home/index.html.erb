@@ -1,2 +1,32 @@
-<h1>Huji🤷🏽‍♂️🤷🏽‍♀️</h1>
-<%= link_to 'My Blog', controller: 'articles' %>
+<div id="home">
+  <nav>
+    <h1>Huji🤷🏽‍♂️🤷🏽‍♀️</h1>
+    <ul>
+      <li>login</li>
+      <li>sign up</li>
+    </ul>
+  </nav>
+  <div class="homepage">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <%= link_to 'My Blog', controller: 'articles' %>
+
+    <div class="home-content">
+      <% @articles.each do |article| %>
+      <div class="articlehome">
+        <%= image_tag ('https://images.pexels.com/photos/351773/pexels-photo-351773.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'), class: 'home-img' %>
+        <p><%= article.title %></p>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+  <div class="home-bottom">
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+</div>
